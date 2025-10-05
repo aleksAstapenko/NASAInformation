@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct NASAInformationApp: App {
+    let serviceLocator = ServiceLocator.shared
+    let getService: () = PhotoOfDayServices.init().registerAllSerives()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AnimatedSplashView()
         }
     }
 }
